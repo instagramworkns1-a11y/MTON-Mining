@@ -3,78 +3,75 @@ const root = document.getElementById("root");
 root.innerHTML = `
 <div class="app">
 
-<div class="header">
+  <div class="header">
     <h1>MTON Mining</h1>
     <p>Telegram Mini App</p>
-</div>
+  </div>
 
-<div class="balance-card">
-    <span>Total Balance</span>
+
+  <div class="balance-card">
+    <h3>My Asset Holding</h3>
     <h2>0.000000 MTON</h2>
-</div>
+    <p>Total Balance</p>
+  </div>
 
 
-<div class="mining-card">
+  <div class="miner-card">
 
-<h3>Mining Status</h3>
+    <h2>Level 1 Miner</h2>
 
-<div class="circle">
-    <button id="mineBtn">START</button>
-</div>
+    <div class="status">
+      ACTIVE
+    </div>
 
-<p id="status">Mining stopped</p>
+    <h1>
+      0.000000 MTON
+    </h1>
 
-</div>
+    <p>
+      Mining Reward
+    </p>
 
+    <div class="speed">
+      ⚡ Speed: 1.00 MTON/hour
+    </div>
 
-<div class="info">
+    <button>
+      CLAIM
+    </button>
 
-<div class="box">
-<h4>Mining Speed</h4>
-<p>0.01 MTON/h</p>
-</div>
-
-<div class="box">
-<h4>User ID</h4>
-<p>#000001</p>
-</div>
-
-</div>
-
-
-<div class="wallet">
-<h3>Wallet</h3>
-<p>Connect your wallet</p>
-</div>
+  </div>
 
 
-<div class="menu">
+  <div class="nav">
 
-<div>⛏ Mine</div>
-<div>👛 Wallet</div>
-<div>👥 Friends</div>
-<div>⚙ Settings</div>
+    <div>
+      📋
+      <span>Tasks</span>
+    </div>
 
-</div>
+    <div>
+      ⚡
+      <span>Miners</span>
+    </div>
+
+    <div class="active">
+      ⛏️
+      <span>Mine</span>
+    </div>
+
+    <div>
+      👥
+      <span>Friends</span>
+    </div>
+
+    <div>
+      💼
+      <span>Wallet</span>
+    </div>
+
+  </div>
 
 
 </div>
 `;
-
-
-let mining = false;
-
-document.getElementById("mineBtn").onclick = function(){
-
-    mining = !mining;
-
-    if(mining){
-        this.innerHTML="STOP";
-        document.getElementById("status").innerHTML="Mining started...";
-    }
-    else{
-        this.innerHTML="START";
-        document.getElementById("status").innerHTML="Mining stopped";
-    }
-
-};
